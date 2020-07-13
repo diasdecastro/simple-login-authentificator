@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Sign Up Test Page</title>
+</head>
+<body>
+    <div id="root">
+        <div class="signupForm">
+            <div class="h1"><h1>Sign Up</h1></div>            
+            <form method="POST" onsubmit="login(this.username.value, this.password.value); return false;">
+                <label for="username">Username: </label>
+                <input type="text" name="username" id="username" placeholder=" &#xf007; Insert Username" style="font-family:Arial, FontAwesome;" autocomplete="off" required>
+                <label for="email">Email: </label>
+                <input type="text" name="email" id="email" placeholder=" &#xf0e0; Insert Email" style="font-family:Arial, FontAwesome;" autocomplete="off" required>
+                <label for="confirm">Confirm Email: </label>
+                <input type="text" name="confirm" id="confirm" placeholder=" &#xf0e0; Confirm Email" style="font-family:Arial, FontAwesome;" autocomplete="off" required>    
+                <label for="password">Password: </label>
+                <input type="text" name="password" id="password" placeholder=" &#xf023; Insert Password" style="font-family:Arial, FontAwesome;" autocomplete="off" required>                
+                <input class="submit" type="submit" value="Sign Up">
+            </form>  
+            <div class="loginField">
+                <p class="loginTxt">Already have an account?</p>
+                <button class="loginButton" onclick="renderLoginPage(); return false;">Login</button>
+            </div>          
+        </div>
+    </div>
+</body>
+</html>
