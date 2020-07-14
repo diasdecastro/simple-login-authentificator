@@ -8,7 +8,7 @@ function renderLoginPage() {
                 '<input type="text" name="username" id="username" placeholder="Insert Username" autocomplete="off" required>' +
                 '<label for="password">Password: </label>' +
                 '<input type="password" name="password" id="password" placeholder="Insert Password" autocomplete="off" required>' +
-                '<div class="forgotPassword"><a href="">Forgot password?</a></div>' +
+                '<div class="forgotPassword"><a href="http://www.imsorry.com/">Forgot password?</a></div>' +
                 '<input class="submit" type="submit" value="Login">' +
             '</form>' + 
             '<div class="signupField">' +

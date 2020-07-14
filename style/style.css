@@ -34,10 +34,6 @@
     font-size: 2em;
 }
 
-.loginForm label, .signupForm label{
-    
-}
-
 .loginForm input[type=text], .loginForm input[type=password], .signupForm input[type=text], .signupForm input[type=password]{
     border-radius: 1em;
     text-indent: 5%;
@@ -103,97 +99,6 @@
   ##Screen = 1281px to higher resolution desktops
 */
 
-@media (min-width: 1281px) {  
-    
-    /* .loginForm form, .signupForm form{
-        width: 35em;
-        height: 30em;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .loginForm label, .signupForm label{
-        font-size: 2em;
-        width: 100%;
-    }
-    
-    .loginForm input[type=text], .loginForm input[type=password], .signupForm input[type=text], .signupForm input[type=password]{
-        border-radius: 1.7em;
-        height: 1.7em;
-        font-size: 1.7em;
-        width:100%;
-    }
-    
-    .loginForm h1, .signupForm h1{
-        font-size: 4em;
-    }
-
-    .submit {
-        border-radius: 1.7em;
-        height: 1.7em;
-        font-size: 1.9em;
-        width:100%;
-    }
-
-    .forgotPassword {
-        font-size: 2em;
-    }
-
-    .signupTxt, .loginTxt{
-        font-size: 1.7em;
-    } */
-  }
-  
-  /* 
-    ##Device = Laptops, Desktops
-    ##Screen = B/w 1025px to 1280px
-  */
-  
-  @media (min-width: 1025px) and (max-width: 1280px) {
-    
-    /* .loginForm form, .signupForm form{
-        width: 30em;
-        height: 25em;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .loginForm label, .signupForm label{
-        font-size: 1.5em;
-        width: 100%;
-    }
-    
-    .loginForm input[type=text], .loginForm input[type=password], .signupForm input[type=text], .signupForm input[type=password]{
-        border-radius: 1.5em;
-        height: 1.5em;
-        font-size: 1.5em;
-        width:100%;
-    }
-    
-    .loginForm h1, .signupForm h1{
-        font-size: 3em;
-    }
-
-    .submit {
-        border-radius: 1.5em;
-        height: 1.5em;
-        font-size: 1.5em;
-        width:100%;
-    }
-
-    .forgotPassword {
-        font-size: 1.5em;
-    }
-
-    .signupTxt, .loginTxt{
-        font-size: 2em;
-    } */
-    
-  }
   
   /* 
     ##Device = Tablets, Ipads (portrait)
