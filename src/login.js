@@ -3,7 +3,7 @@ function renderLoginPage() {
     root.innerHTML = (
         '<div class="loginForm">' +
             '<div class="h1"><h1>Login</h1></div>' +        
-            '<form method="POST" onsubmit="login(this.username.value, this.password.value); return false;">' +
+            '<form id="form" method="POST" onsubmit="login(this.username.value, this.password.value); return false;">' +
                 '<label for="username">Username: </label>' +
                 '<input type="text" name="username" id="username" placeholder="Insert Username" autocomplete="off" required>' +
                 '<label for="password">Password: </label>' +
@@ -45,16 +45,19 @@ function login(username, password) {
                 // Perfect!
                 if(httpRequest.response == "false") {
                     renderHomepageLoggedIn("", false);
+                    return;
                 } else {
                     renderHomepageLoggedIn(httpRequest.response, true);
+                    return;
                 }                    
             }
         }
     }
+    renderHomepageLoggedIn("", false);
 }
 
 function renderHomepageLoggedIn(user, success) {
-    let root = document.getElementById("root");    
+    let root = document.getElementById("root");   
     if(success && user != "dummy") {
         //response object "user" is not a json-obj but json-string. therefore need of deserialization function "JSON.parse()"
         let userObj = JSON.parse(user);
@@ -62,10 +65,11 @@ function renderHomepageLoggedIn(user, success) {
     } else if (user == "dummy"){
         root.innerHTML = `<h1>Welcome!</h1>`;
     } else if (!document.getElementById("wrongCredentials")) {
+        let form = document.getElementById("form");
         let wrongCredentials = document.createElement("div");
         wrongCredentials.id = "wrongCredentials";
-        wrongCredentials.innerHTML = "Username and/or Password wrong";
-        root.appendChild(wrongCredentials);
+        wrongCredentials.innerHTML = "Wrong Username and/or Password";
+        form.appendChild(wrongCredentials);
     }    
 }
 
