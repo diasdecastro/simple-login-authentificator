@@ -95,6 +95,11 @@
     text-align: center;
  }
 
+ #wrongCredentials {
+    text-align: center;
+    font-size: 0.8em;
+ }
+
 /* 
   ##Device = Desktops
   ##Screen = 1281px to higher resolution desktops
@@ -110,7 +115,7 @@
     
     .loginForm form, .signupForm form{
         width: 20em;
-        height: 15em;
+        height: 20em;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -155,6 +160,11 @@
     .signupTxt, .loginTxt{
         font-size: 1.5em;
     }
+
+    #wrongCredentials {
+        text-align: center;
+        font-size: 1em;
+     }
   }
   
   /* 
@@ -209,5 +219,10 @@
     .signupTxt, .loginTxt{
         font-size: 1.3em;
     }
+
+    #wrongCredentials {
+        text-align: center;
+        font-size: 0.8em;
+     }
     
   }
