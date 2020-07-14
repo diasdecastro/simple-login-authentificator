@@ -4,14 +4,22 @@ const session = require('express-session');
 var app = express();
 const bodyparser = require('body-parser');
 
+var mysqlConnection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'myPassword12',
+    database:'nodelogin',
+    multipleStatements: true
+});
+
 //SESSION
-app.use(session({
+app.use(session({    
     secret: "secret",
-    resave: true,
-    saveUninitialized: true,
+    resave: false,
+    saveUninitialized: false,
     cookie: {
         maxAge: 1800000, //30 min
-        // secure: false
+        secure: false
     }
 }));
 
@@ -24,13 +32,7 @@ app.use((req, res, next) => {
 
 app.use(bodyparser.json());
 
-var mysqlConnection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'myPassword12',
-    database:'nodelogin',
-    multipleStatements: true
-});
+
 
 mysqlConnection.connect((err) => {
     if(!err){
@@ -45,6 +47,12 @@ app.listen(3000, () => console.log("Express server is runnung at port 3000"));
 
 //############################## LOGIN ########################################
 
+
+app.get('/', (req, res) => {
+    console.log(req.session);
+    res.send(req.session);
+});
+
 app.post('/login',  (req, res) => {
     let username = req.body.username;
     let password = req.body.password;
@@ -56,7 +64,7 @@ app.post('/login',  (req, res) => {
                 throw err;
             }
             if (results.length > 0) {                     
-                var row = JSON.parse(JSON.stringify(results[0]));
+                var row = JSON.parse(JSON.stringify(results[0]));                          
                 req.session.user = row;
                 res.send(row);
             } else {

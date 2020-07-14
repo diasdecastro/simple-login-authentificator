@@ -70,7 +70,7 @@ function renderHomepageLoggedIn(user, success) {
         wrongCredentials.id = "wrongCredentials";
         wrongCredentials.innerHTML = "Wrong Username and/or Password";
         form.appendChild(wrongCredentials);
-    }    
+    }
 }
 
 
