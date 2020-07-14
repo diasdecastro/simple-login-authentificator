@@ -7,4 +7,10 @@ for the implementation of a login-authentification for other applications.
 Layout of the "users"-table on the MySQL-Database:
 
 
-       id (int) | username (varchar(50)) | password (varchar(255)) | email (varchar(100)) |
+>       id (int) | username (varchar(50)) | password (varchar(255)) | email (varchar(100)) |
+       
+       
+Preview of the UI on https://diasdecastro.github.io/simple-login-authentificator/  
+>Login with:  
+> >     username: dummy  
+> >     password: dummy
